@@ -11,6 +11,7 @@ class  DockingStation
   end
 
   def dock(bike)
+    raise "Station is full" if full?
     @bikes << bike
   end
 
@@ -19,7 +20,7 @@ class  DockingStation
   end
 
   def full?
-    bike_count ==@capacity
+    bike_count == @capacity
   end
 
 end
